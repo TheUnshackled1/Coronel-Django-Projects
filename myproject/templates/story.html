@@ -1,0 +1,398 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Celestial Flavor - Story Page</title>
+
+        <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
+        
+        <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
+        
+        <link href="{% static 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap' %}" rel="stylesheet">                      
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/tooplate-crispy-kitchen.css' %}" rel="stylesheet">
+
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    Celestial Flavor
+                </a>
+
+                <div class="d-lg-none">
+                    <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">Reservation</button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news' %}">News</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                {% if user.is_authenticated %}
+                <button type="button" class="custom-btn btn btn-danger" data-bs-toggle="modal" data-bs-target="#BookingModal">Reservation</button>
+                {% else %}
+                {% endif %}
+
+            </div>
+        </nav>
+
+        <main>
+
+            <header class="site-header site-news-detail-header">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2>Learning a fine dining experience</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <section class="news-detail section-padding pt-0">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <img src="{% static 'images/fine dining.jpg' %}" class="img-fluid news-detail-image" alt="fine dining experience" style="width: 150%; height: 450px; object-fit: cover;">
+
+                            <div class="col-lg-10 col-10 mx-auto mt-5">                               
+                                <h5 class="mt-4 mb-3">The Essence of Fine Dining</h5>
+                                <p>At its core, fine dining represents the pinnacle of culinary achievement, where every element is meticulously crafted to create a memorable experience. It involves not only exquisite cuisine but also an attention to detail that extends to the atmosphere, service, and even the philosophy behind the meal. Understanding this essence is the first step in appreciating what fine dining truly entails.</p>
+                                <h5 class="mt-4 mb-3">The Ambiance and Presentation</h5>
+                                <p>
+                                    The ambiance of a fine dining restaurant is carefully curated to enhance the dining experience. From the choice of decor to the arrangement of tables and lighting, every detail plays a role in setting the mood. Learning about the elements that contribute to this ambiance allows patrons to appreciate how it complements the dining experience.</p>
+                                    <h5 class="mt-4 mb-3">The Role of Service</h5>
+                                <p>
+                                    Service is a cornerstone of the fine dining experience. It is not simply about bringing food to the table; it encompasses an understanding of hospitality, attention to detail, and an ability to anticipate the needs of guests. Learning about the various roles within a fine dining establishment—from the front-of-house staff to the chefs in the kitchen—provides insight into the collaborative effort required to create a seamless experience.</p>
+                                    <h5 class="mt-4 mb-3">The Culinary Journey</h5>
+                                <p>The Culinary Journey
+                                    Learning about fine dining is also a journey through various culinary traditions and cultures. Each fine dining establishment often draws inspiration from its geographic roots, showcasing local ingredients and traditional cooking techniques. Exploring these influences can provide a deeper understanding of the global tapestry of cuisine.</p>
+                                    <h5 class="mt-4 mb-3">The Emotional Connection</h5>
+                                    <p>Fine dining is not solely about the food; it is also an emotional experience. It creates opportunities for connection, celebration, and reflection. Learning to appreciate the moments spent around the table with loved ones can significantly enhance the fine dining experience. Each meal becomes an opportunity to forge memories, whether celebrating a special occasion, rekindling a friendship, or simply enjoying a quiet dinner.</p>
+                                    <h5 class="mt-4 mb-3">The Transformative Power of Fine Dining</h5>
+                                    <p>The journey of learning about fine dining has the potential to be transformative. It invites individuals to step out of their comfort zones, embrace new experiences, and cultivate a deeper understanding of food and its significance in our lives. This transformation extends beyond the dining table; it influences how we view food, hospitality, and the art of sharing meals.</p>
+                                    <h5 class="mt-4 mb-3">The Transformative Power of Fine Dining</h5>
+                                    <p>In conclusion, learning about fine dining is a multifaceted journey that encompasses the artistry of cuisine, the intricacies of service, and the emotional connections formed around the table. It invites individuals to embrace new experiences, expand their culinary horizons, and foster a deeper appreciation for the cultural significance of food.</p>
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="comments section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h4 class="text-center mb-4">Comment Box</h4>
+                        </div>
+
+                        <div class="col-lg-7 col-12 mx-auto">
+                            <form class="custom-form comment-form" action="#" method="get" role="form">
+                            
+                                <input type="text" name="comment-name" id="comment-name" class="form-control" placeholder="Your Name" required>
+                                
+                                <input type="email" name="comment-email" id="comment-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Your Email" required="">
+                            
+                                <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="Write a comment" required></textarea>
+
+                                <div class="col-lg-3 col-4 mx-auto">
+                                    <button type="submit" class="form-control" id="subscribe">Submit</button>
+                                </div>
+                            </form>
+
+                            <div class="news-author d-flex flex-wrap align-items-center">
+                                <img src="{% static 'images/cypher.jpg' %}" class="img-fluid news-author-image" alt="">
+
+                                <div class="ms-4 w-50">
+                                    <p class="mb-2">Let your arrow fly true, no elemental magic shall hinder it.</p>
+                                    
+                                    <a href="#">Cypher Espiritu</a>
+                                </div>
+
+                                <span class="ms-auto">14 hours ago</span>
+                            </div>
+
+                            <div class="news-author d-flex flex-wrap align-items-center">
+                                <img src="{% static 'images/cleo.jpg' %}" class="img-fluid news-author-image" alt="">
+
+                                <div class="ms-4 w-50">
+                                    <p class="mb-2">One should not be free from the process of learning.</p>
+                                    
+                                    <a href="#">Cleo Berioso</a>
+                                </div>
+
+                                <span class="ms-auto">3 days ago</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="related-news section-padding bg-white">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="text-center mb-lg-5 mb-4">Related News</h2>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="news-thumb mb-4">
+                                <a href="news-detail.html">
+                                    <img src="{% static 'images/news/gilles-lambert-S_LhjpfIdm4-unsplash.jpg' %}" class="img-fluid news-image" alt="">
+                                </a>
+                                
+                                <div class="news-text-info">
+                                    <span class="category-tag me-3 bg-info">Promotions</span>
+
+                                    <strong>12 April 2022</strong>
+
+                                    <h5 class="news-title mt-2">
+                                        <a href="news-detail.html" class="news-title-link">Is Coconut good for your health?</a>
+                                    </h5>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="news-thumb mb-4">
+                                <a href="news-detail.html">
+                                    <img src="{% static 'images/news/ella-olsson-mmnKI8kMxpc-unsplash.jpg' %}" class="img-fluid news-image" alt="">
+                                </a>
+                                
+                                <div class="news-text-info">
+                                    <span class="category-tag me-3 bg-info">Career</span>
+
+                                    <strong>18 April 2022</strong>
+
+                                    <h5 class="news-title mt-2">
+                                        <a href="news-detail.html" class="news-title-link">How to run a sushi business?</a>
+                                    </h5>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <div class="news-thumb mb-4">
+                                <a href="news-detail.html">
+                                    <img src="{% static 'images/news/louis-hansel-GiIiRV0FjwU-unsplash.jpg' %}" class="img-fluid news-image" alt="">
+                                </a>
+                                
+                                <div class="news-text-info">
+                                    <span class="category-tag me-3 bg-info">Meeting</span>
+
+                                    <strong>30 April 2022</strong>
+
+                                    <h5 class="news-title mt-2">
+                                        <a href="news-detail.html" class="news-title-link">Learning a fine dining experience</a>
+                                    </h5>
+                                </div>
+                            </div> 
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <img src="{% static 'images/charles-deluvio-FdDkfYFHqe4-unsplash.jpg' %}" class="img-fluid newsletter-image" alt="">
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex align-items-center mt-5 mt-lg-0 mx-auto">
+                            <div class="subscribe-form-wrap">
+                                <h4 class="mb-0">Our Newsletter</h4>
+
+                                <p>The food news every day</p>
+
+                                <form class="custom-form subscribe-form mt-4" role="form">
+                                    <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Your email address" required="">
+
+                                    <button type="submit" class="form-control mb-3" id="subscribe">Subscribe</button>
+
+                                    <small>By signing up, you agree to our Privacy Notice and the data policy</small>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer section-padding">
+            
+            <div class="container">
+                
+                <div class="row">
+
+                    <div class="col-12">
+                        <h4 class="text-white mb-4 me-5">Celestial Flavor</h4>
+                    </div>
+
+                    <div class="col-lg-4 col-md-7 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Location</h6>
+
+                        <p> Talisay City, Negros Occidental, Talisay</p>
+
+                        <a href="https://www.google.com/maps/place/Carlos+Hilado+Memorial+State+University/@10.7429901,122.9690597,17.5z/data=!4m6!3m5!1s0x33aed1c000b9a6a7:0xcd73c532000f2de3!8m2!3d10.7425807!4d122.969157!16s%2Fm%2F0479mfg?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="custom-btn btn btn-dark mt-2">Directions</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-5 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Opening Hours</h6>
+
+                        <p class="mb-2">Monday - Friday</p>
+
+                        <p>10:00 AM - 08:00 PM</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">Social</h6>
+
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/pagunsan77" class="social-icon-link bi-facebook"></a></li>
+                            <p>Celestial Flavor Official Page</p>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <p>@Celestial Flavor</p>
+                            <li><a href="{% static 'https://twitter.com/search?q=tooplate.com&src=typed_query&f=live' %}" target="_blank"
+                                class="social-icon-link bi-twitter"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    
+                        <p class="copyright-text tooplate-mt60">Copyright © 2024 Tyrone's Crispy Kitchen Co.</p>
+                        
+                    </div>
+
+                </div><!-- row ending -->
+                
+            </div><!-- container ending -->
+            
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="BookingModal" tabindex="-1" aria-labelledby="BookingModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="mb-0">Reserve a table</h3>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body d-flex flex-column justify-content-center">
+                        <div class="booking">
+                            
+                            <form class="booking-form row" role="form" action="#" method="post">
+                                <div class="col-lg-6 col-12">
+                                    <label for="name" class="form-label">Full Name</label>
+
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="email" class="form-label">Email Address</label>
+
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="phone" class="form-label">Phone Number</label>
+
+                                    <input type="telephone" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" placeholder="123-456-7890">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="people" class="form-label">Number of persons</label>
+
+                                    <input type="text" name="people" id="people" class="form-control" placeholder="12 persons">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="date" class="form-label">Date</label>
+
+                                    <input type="date" name="date" id="date" value="" class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <label for="time" class="form-label">Time</label>
+
+                                    <select class="form-select form-control" name="time" id="time">
+                                    <option value="5" selected>5:00 PM</option>
+                                    <option value="6">6:00 PM</option>
+                                    <option value="7">7:00 PM</option>
+                                    <option value="8">8:00 PM</option>
+                                    <option value="9">9:00 PM</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Special Request</label>
+
+                                    <textarea class="form-control" rows="4" id="message" name="message" placeholder=""></textarea>
+                                </div>
+
+                                <div class="col-lg-4 col-12 ms-auto">
+                                    <button type="submit" class="form-control">Submit Request</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer"></div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>

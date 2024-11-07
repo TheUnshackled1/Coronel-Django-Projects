@@ -1,0 +1,97 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+/* Apply basic reset to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Container styling */
+.wrapper {
+    width: 400px;
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    background: rgba(5, 5, 5, 0.8);
+}
+
+/* Input field styling */
+.input-field {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.input-field input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.input-field i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+/* Link hover effect */
+.forgot {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.forgot:hover {
+    color: #000dff;
+}
+
+.login {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    border: none; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: 
+}
+
+.login:hover {
+    background-color: #0056b3; 
+}
+
+
+/* Register section styling */
+.sign-up {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sign-up:hover {
+    border-bottom: 2px solid #fff;
+    color: #000dff;
+}
